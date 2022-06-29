@@ -1,0 +1,38 @@
+<div class="container-fluid mt-3 row">
+    <input type="text" placeholder="Task Name" name="task" (keyup.enter)="addTask(task)" class="form-control col" #task
+        ngModel #name="ngModel" required minlength="5">
+    <button (click)="addTask(task)" class="btn btn-success col-1">Add</button>
+    <div *ngIf="name.touched || name.dirty">
+        <span class="text-danger" *ngIf="name.errors?.['required']">Task name is must required.</span>
+        <span class="text-danger" *ngIf="name.errors?.['minlength']">minimum lenght should be 5 charecter.</span>
+    </div>
+    <h2>Tasks List</h2>
+    valid:- {{name.valid}}
+    touched:- {{name.touched}}
+    prestine:- {{!name.dirty}}
+    <div class="alert alert-success alert-dismissible fade show" *ngFor="let item of arey; let i= index">
+        <button type="button" class="btn-close" data-bs-dismiss="alert" (click)="removeTask(i)"></button>
+        {{item}}
+    </div>
+</div>
+
+<div>
+</div>
+<div class="container-fluid mt-3 row">
+   <input type="text" placeholder="Task Name" name="task" (keyup.enter)="addTask(task)" form-control col #task
+   ngModel #name="ngModel" required minlength="5">
+   <div *ngif="name.touched ||name.dirty">
+    <span class="text-danger" *ngIf="name.errors?.['required']"></span>
+    <span class="text-danger" *ngIf="name.errors?.['minlength']"></span>
+   </div>
+   <h2>task list</h2>
+   valid:-{{name.valid}}
+   touched:-{{name.touched}}
+   prestine:-{{name.dirty}}
+
+    
+<div>
+</div>
+
+</div>
+

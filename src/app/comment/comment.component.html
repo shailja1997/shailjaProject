@@ -1,0 +1,18 @@
+<h1>comment works!</h1>
+
+<table>
+    <tr>
+        <th>name</th>
+        <th>id</th>
+        <th>email</th>
+    </tr>
+    <tr *ngFor="let comments of comment">
+        <td>{{comments.name | lowercase}}</td>
+        <td>{{comments.id | date:'dd-MMM-YYYY HH:mm:ss'}}</td>
+        <td>{{comments.email | lowercase}}</td>
+    </tr>
+</table>
+<br><br>
+
+
+
